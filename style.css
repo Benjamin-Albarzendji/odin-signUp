@@ -20,7 +20,8 @@ body {
 
 .img {
   display: flex;
-  width: 45%;
+  width: 35%;
+  flex-shrink: 0;
 }
 
 img {
@@ -30,7 +31,7 @@ img {
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: auto;
 }
 
 .top {
@@ -45,21 +46,38 @@ img {
 }
 
 .input {
-  display: flex;
-  background-color: white;
-  height: 36%;
+display: flex;
+background-color: white;
+min-height: 40%;
+width: 100%;
+flex-shrink: 0;
+  
 }
 
 .formInput {
   display: flex;
-  flex-direction: row;
-  width: 60%;
   margin-left: 4%;
-  margin-top: 0%;
   align-items: center;
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  
+  
+  
+
+  
+}
+
+.toprow,.midrow,.bottomrow{
+    display: flex;
+    flex-wrap: wrap; 
+    width: 51%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+    
 }
 
 .input p {
@@ -72,20 +90,20 @@ img {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  flex-wrap: wrap;
+  
 }
 
-.form-row:nth-child(even) {
-  margin-left: 100px;
-}
 
 .form-row input[type="text"] {
   background-color: #ffffff;
   border: 1px solid #d6d9dc;
   border-radius: 3px;
-  width: 150%;
+width: 110%;
+min-width: 50%;
   padding: 5px;
   font-size: 14px;
+  display: flex;
+  flex-shrink: 1;
 }
 .form-row label {
   font-size: 0.6rem;
@@ -97,7 +115,6 @@ img {
   display: flex;
   margin-bottom: 5%;
   margin-left: 3%;
-  margin-right: 3%;
   gap: 5px;
   align-items: center;
   font-weight: bold;
