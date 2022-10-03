@@ -5,14 +5,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign-up Form</title>
   </head>
   <body>
     <div class="mainbox">
       <div class="img">
+        <div class="banner">
+
+        
+        </div>
+        <div class="bannerText">
+
+            GALAXY 
+        </div>
         <img
           id="space"
-          src="https://images.unsplash.com/photo-1527066579998-dbbae57f45ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1285&q=80"
+          src="https://images.unsplash.com/photo-1507499739999-097706ad8914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1289&q=80"
           alt="Space Background"
         />
       </div>
@@ -27,54 +35,103 @@
         </div>
 
         <div class="input">
-          <form action="/">
+          <form action="index.html">
             <p>Let's Do This!</p>
             <div class="formInput">
               <div class="toprow">
                 <div class="form-row">
-                <label for="first-name">FIRST NAME</label>
-                <input id="first-name" name="first-name" type="text" />
+                  <label for="first-name">FIRST NAME</label>
+                  <input
+                    id="first-name"
+                    name="first-name"
+                    type="text"
+                    maxlength="15"
+                    minlength="1"
+                    required
+                    placeholder=" "
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="last-name">LAST NAME</label>
+                  <input
+                    id="last-name"
+                    name="last-name"
+                    type="text"
+                    maxlength="15"
+                    minlength="1"
+                    required
+                    placeholder=" "
+                  />
+                </div>
               </div>
 
-              <div class="form-row">
-                <label for="last-name">LAST NAME</label>
-                <input id="last-name" name="last-name" type="text" />
+              <div class="midrow">
+                <div class="form-row">
+                  <label for="email">EMAIL</label>
+                  <input 
+                  id="email" 
+                  name="email" 
+                  type="email" 
+                  required 
+                  placeholder=" " 
+                  minlength="2"
+                  />
+                </div>
+                <div class="form-row">
+                  <label for="phone">PHONE NUMBER</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    maxlength="12"
+                    minlength="7"
+                    required
+                    placeholder=" "
+                    
+                  />
+                </div>
+              </div>
+
+              <div class="bottomrow">
+                <div class="form-row">
+                  <label for="password">PASSWORD</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    required
+                    minlength="8"
+                    placeholder=" "
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="passwordCon">CONFIRM PASSWORD</label>
+                  <input
+                    id="passwordCon"
+                    name="passwordCon"
+                    type="password"
+                    minlength="8"
+                    required
+                    placeholder=" "
+                    pattern="^[a-zA-Z(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    
+                  />
+                </div>
               </div>
             </div>
-
-            <div class="midrow">
-              <div class="form-row">
-                <label for="last-name">LAST NAME</label>
-                <input id="last-name" name="last-name" type="text" />
-              </div>
-              <div class="form-row">
-                <label for="last-name">LAST NAME</label>
-                <input id="last-name" name="last-name" type="text" />
-              </div>
-            </div>
-
-            <div class="bottomrow">
-
-              <div class="form-row">
-                <label for="last-name">LAST NAME</label>
-                <input id="last-name" name="last-name" type="text" />
-              </div>
-
-              <div class="form-row">
-                <label for="last-name">LAST NAME</label>
-                <input id="last-name" name="last-name" type="text" />
-              </div>
-              
-            </div>
-
-
-            </div>
-          </form>
+           
         </div>
 
         <div class="bottom">
-          <p>Already have an account?</p>
-          <a href="/">Log In</a>
+            <button type="submit">Send your message</button>
+        </form>
+          <div class="logIn">
+            <p>Already have an account?</p>
+            <a href="index.html">Log In</a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,7 @@
+@font-face{
+    font-family: "Entanglement";
+    src: url("Entanglement-rgpRB.ttf");
+}
 body {
   background-color: rgba(243, 243, 243, 0.72);
   display: flex;
@@ -5,7 +9,7 @@ body {
   justify-content: center;
   height: 90vh;
   align-items: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .mainbox {
@@ -22,10 +26,35 @@ body {
   display: flex;
   width: 35%;
   flex-shrink: 0;
+  position: relative;
 }
 
 img {
   width: 100%;
+}
+
+.banner{
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(11, 5, 5, 0.465);
+
+}
+
+.bannerText{
+    position: absolute;
+    bottom: 44%;
+    width: 100%;
+    font-family: "Entanglement";
+    font-size: 5.5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-left: 3%;
+ 
+    
 }
 
 .form {
@@ -36,7 +65,7 @@ img {
 
 .top {
   margin-top: 5%;
-  margin-left: 3%;
+  margin-left: 4%;
   margin-right: 15%;
   font-weight: bold;
   font-size: 1.1rem;
@@ -46,14 +75,13 @@ img {
 }
 
 .input {
-display: flex;
-background-color: white;
-min-height: 40%;
-width: 100%;
-flex-shrink: 0;
-  
+  display: flex;
+  background-color: white;
+  min-height: 40%;
+  width: 100%;
+  flex-shrink: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
 .formInput {
   display: flex;
   margin-left: 4%;
@@ -61,23 +89,17 @@ flex-shrink: 0;
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
-  width: 100%;
-  
-  
-  
-
-  
 }
 
-.toprow,.midrow,.bottomrow{
-    display: flex;
-    flex-wrap: wrap; 
-    width: 51%;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    
-    
+.toprow,
+.midrow,
+.bottomrow {
+  display: flex;
+  flex-wrap: wrap;
+  width: 51%;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .input p {
@@ -86,39 +108,65 @@ flex-shrink: 0;
 }
 
 .form-row {
-  margin-bottom: 10px;
+  margin-bottom: 2%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  
 }
 
-
-.form-row input[type="text"] {
+.form-row input {
   background-color: #ffffff;
   border: 1px solid #d6d9dc;
   border-radius: 3px;
-width: 110%;
-min-width: 50%;
+  width: 110%;
+  min-width: 50%;
   padding: 5px;
-  font-size: 14px;
   display: flex;
-  flex-shrink: 1;
+}
+
+.form-row input:not(:focus):not(:placeholder-shown):invalid {
+  border: solid red;
+}
+
+.form-row input:not(:focus):not(:placeholder-shown):valid {
+  border: solid rgb(45, 225, 0);
 }
 .form-row label {
   font-size: 0.6rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 2%;
 }
 
 .bottom {
   display: flex;
+  flex-direction: column;
+  margin-top: 3%;
   margin-bottom: 5%;
   margin-left: 3%;
   gap: 5px;
-  align-items: center;
   font-weight: bold;
   font-size: 0.8rem;
+}
+.bottom button {
+  width: 10rem;
+  height: auto;
+  border-radius: 10rem;
+  border: solid white;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+}
+.bottom button:hover {
+  transform: scale(1.05);
+  background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+  border: solid white;
+}
+
+.logIn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 a {
